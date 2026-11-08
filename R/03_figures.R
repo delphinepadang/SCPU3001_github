@@ -10,7 +10,7 @@
 #   Figure 8  Implementation roadmap                        (roadmap)
 # =============================================================================
 
-base <- 9   # point size at the printed width of 6.25 in
+base <- 10  # point size at the printed width of 6.25 in
 
 # ---- Figure 3: cost curves --------------------------------------------------
 curves <- read_data("cost_model_curves.csv")
@@ -122,6 +122,7 @@ fig4 <- ggplot(res) +
         plot.caption = element_text(hjust = 0.5, colour = pal$ink2, size = base - 0.5))
 save_fig(fig4, "figure4_savings.png", height = 3.9)
 
+base <- 9  # figure-specific text size
 # ---- Figure 5: decision matrix ---------------------------------------------
 sm <- read_data("screen_matrix.csv")
 sm$row <- factor(sm$label, rev(sm$label))
@@ -169,6 +170,7 @@ p5b <- ggplot(s2, aes(col, row)) +
 fig5 <- p5a + p5b + plot_layout(widths = c(4, 3))
 save_fig(fig5, "figure5_decision_matrix.png", height = 3.4)
 
+base <- 10  # figure-specific text size
 # ---- Figure 6: robustness ----------------------------------------------------
 p6a <- ggplot(data.frame(gap = gap), aes(gap)) +
   geom_histogram(binwidth = 0.02, boundary = 0, fill = pal$scores[["3"]], colour = "white", linewidth = 0.2) +
@@ -177,6 +179,7 @@ p6a <- ggplot(data.frame(gap = gap), aes(gap)) +
            label = sprintf("%s of %s weightings put\nthe Netherlands first",
                            format(sum(gap > 0), big.mark = ","), format(length(gap), big.mark = ","))) +
   scale_x_continuous(limits = c(-0.02, 1.02), breaks = seq(0, 1, 0.25)) +
+  scale_y_continuous(expand = expansion(mult = c(0.02, 0.32))) +
   labs(title = "(a) Weights", x = "Netherlands’ score minus Belgium’s\n(below 0 would put Belgium first)",
        y = "Number of weightings") +
   theme_report(base)
@@ -186,11 +189,11 @@ p6b <- ggplot(th, aes(factor(score), share)) +
   geom_col(width = 0.6, fill = pal$scores[["3"]]) +
   geom_text(aes(label = percent(share, 1)), vjust = -0.4,
             family = FONT, size = (base - 1) / .pt, colour = pal$ink) +
-  annotate("text", x = 0.6, y = 0.98, hjust = 0, vjust = 1, family = FONT, size = (base - 1) / .pt,
+  annotate("text", x = 0.5, y = 1.34, hjust = 0, vjust = 1, family = FONT, size = (base - 1) / .pt,
            colour = pal$ink, lineheight = 0.95,
            label = paste0("Bars: share of weightings in which\nSouth Africa outranks Belgium.",
                           if (never_nl) "\nIt never outranks the Netherlands." else "")) +
-  scale_y_continuous(labels = percent, limits = c(0, 1), breaks = c(0, 0.5, 1)) +
+  scale_y_continuous(labels = percent, limits = c(0, 1.34), breaks = c(0, 0.5, 1)) +
   labs(title = "(b) Missing data", x = "Economic score assumed for South Africa", y = "Share of weightings") +
   theme_report(base) + theme(panel.grid.major.x = element_blank())
 vol <- data.frame(alt = factor(c("Netherlands\n(estimate, range)", "Belgium\n(1985–96 record)"),
@@ -212,8 +215,9 @@ p6c <- ggplot(vol, aes(y = alt)) +
   labs(title = "(c) Volume", x = "Raw liquid ILW, m³ per year (licensing model)", y = NULL) +
   theme_report(base) + theme(panel.grid.major.y = element_blank())
 fig6 <- (p6a | p6b) / p6c + plot_layout(heights = c(1.5, 1))
-save_fig(fig6, "figure6_robustness.png", height = 4.55)
+save_fig(fig6, "figure6_robustness.png", height = 4.8)
 
+base <- 9  # figure-specific text size
 # ---- Figure 7: risk matrix ---------------------------------------------------
 # Risk titles are read from data/risks.csv, the same wording as Appendix A.
 risks <- read_data("risks.csv")

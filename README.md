@@ -1,6 +1,6 @@
 # Licensing Synroc abroad: decision model and figures
 
-Code and data behind the SCPU3001 Group Project Report for ANSTO, *Where should ANSTO license Synroc first?* The report screens eight jurisdictions with a two-stage multi-criteria decision analysis (MCDA), tests the ranking for robustness, and uses a Monte Carlo cost model to check whether Synroc beats cementation for each waste stream.
+Code and data behind the SCPU3001 Group Project Report for ANSTO, *Where Can Synroc Succeed Abroad?* The report screens eight jurisdictions with a two-stage multi-criteria decision analysis (MCDA), tests the ranking for robustness, and uses a Monte Carlo cost model to check whether Synroc beats cementation for each waste stream.
 
 The interactive version for ANSTO staff is at
 <https://delphinepadang.github.io/Licensing_Synroc_ANSTO/docs/index.html#questions>

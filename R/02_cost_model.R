@@ -78,6 +78,18 @@ cmp <- data.frame(case = cmp$case, model = cmp$model,
                   p_cheaper_rerun = round(cmp$p_cheaper_rerun, 3))
 write_table(cmp, "cost_model_comparison.csv")
 
+# ---- Belgium at its documented volume (Appendix B6) -------------------------
+# The published Belgian case used 4 m3 a year; IRE's documented output is 3.2 m3
+# a year (IAEA-TECDOC-1051). Re-run the licence case at both volumes.
+be_row <- cases[cases$case == "Belgium, Mo-99 liquid", ]
+be_doc <- do.call(rbind, lapply(c(4.0, 3.2), function(v) {
+  r <- be_row; r$volume_min <- v; r$volume_mode <- v; r$volume_max <- v
+  data.frame(volume_m3 = v, t(summ(run_case(r)$saving_licence)))
+}))
+write_table(be_doc, "belgium_documented_volume.csv")
+message(sprintf("  Belgium licence at 3.2 m3/yr: median A$%.2fm, cheaper in %.0f%%",
+                be_doc$median[2], 100 * be_doc$p_cheaper[2]))
+
 # ---- Licence break-even volumes from the published curves (Figure 3) --------
 curves <- read_data("cost_model_curves.csv")
 avoid  <- read_data("avoidable_costs.csv")
