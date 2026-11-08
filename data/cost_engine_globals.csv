@@ -1,0 +1,16 @@
+parameter,value,unit,note
+capex_ref,140.2,A$ million,SyMo audited budget [7]
+capacity_ref,6.25,m3 raw liquid per year,SyMo design capacity [7]
+opex_ref,8.0,A$ million per year,Assumption: annual operating cost of a SyMo-scale plant
+scale_exponent,0.614,-,Cost-capacity exponent (close to the six-tenths rule)
+min_scale,1.5,m3 per year,"Smallest practical plant; below this, cost is fixed"
+discount_rate,0.035,"real, per year",[14]
+plant_life,30,years,Assumption
+licence_share_min,0.35,share of plant cost,Appendix B6
+licence_share_mode,0.55,share of plant cost,Assumption
+licence_share_max,0.7,share of plant cost,Appendix B6
+synroc_volume_min,0.25,m3 packaged per m3 raw,"[4], [30]"
+synroc_volume_max,1.0,m3 packaged per m3 raw,"[4], [30]"
+treatment_cost_sdlog,0.17,-,Uncertainty in treatment cost (log scale)
+n_draws,20000,-,
+seed,2026,-,

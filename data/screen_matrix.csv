@@ -1,0 +1,8 @@
+id,label,chemistry,legal_admissibility,volume_vs_breakeven,stage1_outcome,technical,economic,law_politics,social
+NL,NL · Petten (Curium; COVRA),Provisional,Pass,0.7–4.0 vs 0.5,Proceeds,3,5,4,3
+BE,BE · Fleurus (IRE; ONDRAF),Provisional,Pass,3.2 vs 1.0,Proceeds,2,4,3.5,3
+ZA,"ZA · NTP, Pelindaba",Provisional,Pass,Not modelled,Evidence gap,3,,2.5,3
+CA_D,CA · Darlington (neutron capture),Not shown,Pass,Not modelled,Evidence gap,,,3,
+UK_R,UK · resins and sludges,Not shown,Pass,Needs 240,Excluded,,1,4,
+CA_R,"CA · Chalk River resins, sludges",Out of scope,Pass,"Needs 2,000",Excluded,,1,3,
+FR,FR · no current producer,Future only,Pass,No stream,Excluded,,,2.5,

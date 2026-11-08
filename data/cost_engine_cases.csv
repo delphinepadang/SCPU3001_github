@@ -1,0 +1,7 @@
+case,group,volume_min,volume_mode,volume_max,cement_ratio,charge_median,charge_sdlog,delay_min,delay_max
+"Netherlands, Mo-99 liquid",target,0.7,1.2,4.0,25,0.222,0.33,0,0
+"Belgium, Mo-99 liquid",target,4.0,4.0,4.0,25,0.119,0.62,0,0
+"UK, resins and sludges",other,6.8,6.8,6.8,5.5,0.209,0.25,25,50
+"Canada, resins and sludges",other,38,38,38,5.5,0.097,0.45,25,50
+"Dutch waste, UK rules",test,0.7,1.2,4.0,25,0.209,0.25,25,50
+"Dutch waste, Canadian rules",test,0.7,1.2,4.0,25,0.097,0.45,25,50

@@ -1,0 +1,13 @@
+case,group,model,median_saving,p10_saving,p90_saving,p_cheaper
+"Netherlands, Mo-99 liquid",target,plant,1.0,-1.15,3.6,0.71
+"Netherlands, Mo-99 liquid",target,licence,2.7,0.76,5.24,0.96
+"Belgium, Mo-99 liquid",target,plant,-0.26,-2.36,2.9,0.45
+"Belgium, Mo-99 liquid",target,licence,1.36,-0.51,4.42,0.81
+"UK, resins and sludges",other,plant,-1.85,-2.77,-1.21,0.005
+"UK, resins and sludges",other,licence,-0.82,-1.41,-0.43,0.005
+"Canada, resins and sludges",other,plant,-1.03,-1.33,-0.72,0.005
+"Canada, resins and sludges",other,licence,-0.45,-0.72,-0.22,0.005
+"Dutch waste, UK rules",test,plant,-2.17,-3.55,-1.17,0.005
+"Dutch waste, UK rules",test,licence,-0.55,-1.5,0.19,0.16
+"Dutch waste, Canadian rules",test,plant,-2.64,-4.0,-1.87,0.005
+"Dutch waste, Canadian rules",test,licence,-1.08,-1.87,-0.55,0.005

@@ -1,0 +1,9 @@
+id,jurisdiction,bloc,case_for_inclusion,decisive_finding,stage1_outcome,legal_score,political_score,deciding_political_factor
+AU,Australia,Benchmark,ANSTO’s own stream and plant [1],Reference formulation; SyMo still commissioning,Benchmark,4,3,Own plant; national waste site abandoned in 2023 [52]
+NL,Netherlands,EU,"Fission Mo-99 producer: Curium, Petten [20]",Matching waste; disposal paid on hand-over,Proceeds: first,3,5,"State funds isotope supply; liability passes to COVRA [37], [45]"
+BE,Belgium,EU,"Fission Mo-99 producer: IRE, Fleurus [20]",Matching waste; documented volume,Proceeds: second,3,4,"State-backed RECUMO; nuclear phase-out repealed in 2025 [46], [47]"
+ZA,South Africa,Commonwealth,"Fission Mo-99 producer: NTP, Pelindaba [20]",Matching waste; no volume or cost data,Evidence gap,3,2,Regulator halted NTP for a year; board replaced [50]
+CA,Canada,Commonwealth,About 40% of world Mo-99 until 2016; our plan’s lead case [21],Now non-fission; disposal decades away,Excluded (Darlington: data gap),3,3,Technology-neutral regulator; no comparable stream [49]
+UK,United Kingdom,Commonwealth,"Most prepared regulator; HIP trials on its ILW [22], [23]",No isotope stream; other ILW does not pay,Excluded,4,4,"State funds HIP for plutonium, with ANSTO [42], [48]"
+FR,France,EU,Future Mo-99 producer (Jules Horowitz Reactor) [24],No current stream; national vitrification industry,Revisit later,3,2,Competing national vitrification industry [51]
+EU,EU framework,EU,Shared rules for the three EU cases [17],"Sets duties, not wasteform criteria",Baseline,,,
