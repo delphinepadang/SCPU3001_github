@@ -212,7 +212,7 @@ p6c <- ggplot(vol, aes(y = alt)) +
   labs(title = "(c) Volume", x = "Raw liquid ILW, m³ per year (licensing model)", y = NULL) +
   theme_report(base) + theme(panel.grid.major.y = element_blank())
 fig6 <- (p6a | p6b) / p6c + plot_layout(heights = c(1.5, 1))
-save_fig(fig6, "figure6_robustness.png", height = 4.9)
+save_fig(fig6, "figure6_robustness.png", height = 4.55)
 
 # ---- Figure 7: risk matrix ---------------------------------------------------
 # Risk titles are read from data/risks.csv, the same wording as Appendix A.
@@ -238,7 +238,7 @@ p7a <- ggplot(cells, aes(I, L)) +
   theme_report(base) +
   theme(panel.grid = element_blank(), axis.ticks = element_blank(), legend.position = "bottom",
         legend.title = element_text(size = base - 1), legend.text = element_text(size = base - 1),
-        legend.key.size = unit(8, "pt"))
+        legend.key.size = unit(8, "pt"), legend.margin = margin(0, 0, 0, 0), legend.box.spacing = unit(2, "pt"))
 leg <- data.frame(id = risks$id, lab = risks$risk, k = seq_len(nrow(risks)),
                   band = band_of(risks$inherent_likelihood * risks$inherent_impact))
 leg$y <- -leg$k
@@ -252,7 +252,7 @@ p7b <- ggplot(leg) +
   scale_y_continuous(limits = c(-nrow(leg) - 0.6, -0.4), expand = c(0, 0)) +
   theme_void()
 fig7 <- p7a + p7b + plot_layout(widths = c(1, 1.75))
-save_fig(fig7, "figure7_risk_matrix.png", height = 3.3)
+save_fig(fig7, "figure7_risk_matrix.png", height = 2.85)
 
 # ---- Figure 8: implementation roadmap ----------------------------------------
 road <- read_data("roadmap.csv")
